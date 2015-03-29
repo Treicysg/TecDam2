@@ -33,3 +33,6 @@ C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamGUI\obj\Debug\DamView.g.cs
 C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\Pruebas\DamProject\DamGUI\bin\Debug\DamGUI.exe.config
 C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\Pruebas\DamProject\DamGUI\obj\Debug\DamGUI.exe
 C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\Pruebas\DamProject\DamGUI\obj\Debug\DamGUI.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.exe.config
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.exe
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.pdb
