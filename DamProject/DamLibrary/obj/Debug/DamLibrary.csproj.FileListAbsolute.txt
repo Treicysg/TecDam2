@@ -1,0 +1,10 @@
+C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb

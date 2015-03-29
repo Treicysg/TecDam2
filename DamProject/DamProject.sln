@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamLibrary", "DamLibrary\DamLibrary.csproj", "{517E43FB-46F7-4350-9BBA-8B22F7AF1057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamGUI", "DamGUI\DamGUI.csproj", "{A2903384-6FD9-42D3-9045-3438C3A4F7D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517E43FB-46F7-4350-9BBA-8B22F7AF1057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517E43FB-46F7-4350-9BBA-8B22F7AF1057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517E43FB-46F7-4350-9BBA-8B22F7AF1057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517E43FB-46F7-4350-9BBA-8B22F7AF1057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2903384-6FD9-42D3-9045-3438C3A4F7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2903384-6FD9-42D3-9045-3438C3A4F7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2903384-6FD9-42D3-9045-3438C3A4F7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2903384-6FD9-42D3-9045-3438C3A4F7D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
