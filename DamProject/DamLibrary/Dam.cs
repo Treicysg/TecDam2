@@ -104,6 +104,7 @@ namespace DamProject.DamLibrary
         private static Object _LockObj = new Object();
         private List<IObserver<Dam>> _Observers = null;
         private List<Turbine> _Turbine = null;
+
         #endregion
     }
 
