@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DamProject.DamLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,35 @@ namespace DamProject.DamGUI
     /// <summary>
     /// Interaction logic for TecDam.xaml
     /// </summary>
-    public partial class TecDam : Window
+    public partial class TecDam : Window, IObserver<Dam>
     {
         public TecDam()
         {
             InitializeComponent();
         }
+
+
+        #region observer methods
+
+        public virtual void OnCompleted()
+        {
+        }
+
+        public virtual void OnError(Exception e)
+        {
+        }
+
+        public virtual void OnNext(Dam pValue)
+        {
+       
+            //Obtener valores que necesitan mostrarse en ventana
+
+        }
+
+
+        #endregion
+
+        #region attributes
+        #endregion
     }
 }

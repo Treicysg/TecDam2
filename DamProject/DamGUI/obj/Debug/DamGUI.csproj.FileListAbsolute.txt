@@ -65,3 +65,5 @@ C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\D
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.g.resources
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamGUI\obj\Debug\DamProject.DamGUI.Properties.Resources.resources
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csproj.GenerateResource.Cache
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\TecDam.baml
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\TecDam.g.cs

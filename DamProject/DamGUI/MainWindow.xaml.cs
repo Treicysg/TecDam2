@@ -22,10 +22,16 @@ namespace DamProject.DamGUI
     public partial class MainWindow : Window
     {
 
-      
+        
         public MainWindow()
         {
             InitializeComponent();
+            
+            var DamSimulation = Dam.Instance;
+            DamSimulation.createTurbine(turbineQuantity, outFlowMin, outFlowMax, megawattsMin, megaWattsMax,
+             heightwaterMin, heightWaterMax);
+            DamSimulation.createWaterReservoir(speddMet, height, lenght, width);
+
         }
 
         private void _BtnCreateDam_Click(object sender, RoutedEventArgs e)
@@ -40,27 +46,32 @@ namespace DamProject.DamGUI
             String heightWaterMaxText = _TxtWaterHeightMax.Text;
             String megawattsMinText = _TxtMWmin.Text;
             String megaWattsMaxText = _TxtMWMax.Text;
-            String speddMetText = _TxtSpeddMet.Text;
+            String speedMetText = _TxtSpeedMet.Text;
 
             if (heightText == "" || lenghtText == "" || widthText == "" || turbineQuantityText == ""
                 || outFlowMinText == "" || outFlowMaxText == "" || heightwaterMinText == "" ||
-                heightWaterMaxText == "" || megawattsMinText == "" || megaWattsMaxText == "" || speddMetText == "")
+                heightWaterMaxText == "" || megawattsMinText == "" || megaWattsMaxText == "" || speedMetText == "")
             {
                 MessageBox.Show("Debe ingresar todos los datos");
             }
             else
             {
-                long height = convertToLong(heightText);
-                long lenght = convertToLong(lenghtText);
-                long width = convertToLong(widthText);
-                long turbineQuantity = convertToLong(turbineQuantityText);
-                long outFlowMin = convertToLong(outFlowMinText);
-                long outFlowMax = convertToLong(outFlowMaxText);
-                long heightwaterMin = convertToLong(heightwaterMinText);
-                long heightWaterMax = convertToLong(heightWaterMaxText);
-                long megawattsMin = convertToLong(megawattsMinText);
-                long megaWattsMax = convertToLong(megaWattsMaxText);
-                long speddMet = convertToLong(speddMetText);
+
+                height = Convert.ToInt64(heightText);
+                lenght = Convert.ToInt64(lenghtText);
+                width = Convert.ToInt64(widthText);
+                turbineQuantity = Convert.ToInt32(turbineQuantityText);
+                outFlowMin = Convert.ToInt64(outFlowMinText);
+                outFlowMax = Convert.ToInt64(outFlowMaxText);
+                heightwaterMin = Convert.ToInt64(heightwaterMinText);
+                heightWaterMax = Convert.ToInt64(heightWaterMaxText);
+                megawattsMin = Convert.ToInt64(megawattsMinText);
+                megaWattsMax = Convert.ToInt64(megaWattsMaxText);
+                speddMet = Convert.ToInt64(speedMetText);
+
+                TecDam tecdam = new TecDam();
+                tecdam.ShowDialog();
+               
 
             }
 
@@ -68,19 +79,26 @@ namespace DamProject.DamGUI
             
         }
 
-        #region methods
+        #region Atributtes
 
-        private long convertToLong(String pString) {
-            long newNumber;
+        private static long height;
+        private static long lenght;
+        private static long width;
+        private static int turbineQuantity;
+        private static long outFlowMin;
+        private static long outFlowMax;
+        private static long heightwaterMin;
+        private static long heightWaterMax;
+        private static long megawattsMin;
+        private static long megaWattsMax;
+        private static long speddMet;
 
-            newNumber = Convert.ToInt64(pString);
-            return newNumber;
-        }
 
-       
-       
 
         #endregion
+
+
+      
 
 
 
