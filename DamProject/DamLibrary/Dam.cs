@@ -60,6 +60,11 @@ namespace DamProject.DamLibrary
             _TotalPower += pValue.CurrentMegawatts;
             _OutFlow = pValue.CurrentOutFlow;
 
+            foreach (IObserver<Dam> observer in _Observers)
+            {
+                observer.OnNext(this);
+            }
+
 
         }
         #endregion
@@ -75,7 +80,7 @@ namespace DamProject.DamLibrary
 
         #region Methods
 
-        private void createTurbine(int pAmountTurbine, long pOutFlowMin,long pOutFlowMax,
+        public void createTurbine(int pAmountTurbine, long pOutFlowMin,long pOutFlowMax,
         long pMegaWattsMin,long pMegaWattsMax,long pHeightMinWater,long pHeigtMaxWater) 
         {
 
@@ -88,7 +93,7 @@ namespace DamProject.DamLibrary
             }
         }
 
-        private void createWaterReservoir(long pWaterFlowSpeed,long pHeight,long pLenght,long pWidth) {
+        public void createWaterReservoir(long pWaterFlowSpeed,long pHeight,long pLenght,long pWidth) {
 
             WaterReservoir Reservoir = new WaterReservoir(pWaterFlowSpeed, pHeight, pLenght, pWidth);
            

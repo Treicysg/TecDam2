@@ -22,9 +22,7 @@ namespace DamProject.DamGUI
     public partial class MainWindow : Window
     {
 
-        
-  
-
+      
         public MainWindow()
         {
             InitializeComponent();
