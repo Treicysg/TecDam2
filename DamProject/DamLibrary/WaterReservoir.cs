@@ -97,15 +97,24 @@ namespace DamProject.DamLibrary
 
         #region Methods
 
-        public void updateWaterLevel()
+        public void updateWaterLevel(long pOutWaterFlowSpeed)
         {
-            long waterIncome=9999;
+            long waterIncome;
+
+            waterIncome = _WaterFlowSpeed - pOutWaterFlowSpeed;
+            long lastHeight = getWaterHeight();
+            increaseWaterLevel(waterIncome);
+            long change = getWaterHeight() - lastHeight;
+            
+
             // velocidadEntra el agua - velocidad a la que sale
             // lo anterior es por segundo
             // calculo cuantos segundos han pasado
             // ya se cuanta aguan entro, entonces calculo cuanto se modifica la altura
-            _CurrentHeight += waterIncome;
-            if (Math.Abs(waterIncome) > 1)
+
+
+       
+            if (Math.Abs(change) > 1)
             {
                 foreach (IObserver<WaterReservoir> observer in _Observers)
                 {
@@ -123,9 +132,9 @@ namespace DamProject.DamLibrary
         }
 
 
-        public void increaseWaterLevel() {
+        public void increaseWaterLevel(long pWater) {
 
-            _WaterQuantity +=_WaterFlowSpeed;
+            _WaterQuantity +=pWater;
         
         
         }
@@ -145,9 +154,10 @@ namespace DamProject.DamLibrary
 
         }
 
-        public void getWaterHeight() {
+        public long getWaterHeight() {
 
             _CurrentHeight = _WaterQuantity /(_Width*_Lenght);
+            return _CurrentHeight;
           
         
         }

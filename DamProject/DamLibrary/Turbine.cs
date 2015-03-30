@@ -106,6 +106,24 @@ namespace DamProject.DamLibrary
             }
         }
 
+        public long CurrentMegawatts
+        {
+            get
+            {
+                return _CurrentMegawatts;
+            }
+           
+        }
+
+        public long CurrentOutFlow
+        {
+            get
+            {
+                return _CurrentOutFlow;
+            }
+
+        }
+
 
 
        
@@ -142,20 +160,19 @@ namespace DamProject.DamLibrary
 
         #region Methods 
         //Parameters will be check in Dam class
-        public long getMegaWatts() 
-        {
-            long currentMegawatts;
-            currentMegawatts = (_CurrentHeightWater * _MegaWattsMax) / _HeigtMaxWater;
-            return currentMegawatts;
-         
-        }
+        
 
-        public long getOutFlow() 
+        public void updateValues()
         {
-            long currentOutFlow;
-            currentOutFlow= (_CurrentHeightWater * _OutFlowMax) / _HeigtMaxWater;
-            return currentOutFlow;
-          
+           _CurrentMegawatts = (_CurrentHeightWater * _MegaWattsMax) / _HeigtMaxWater;
+           _CurrentOutFlow= (_CurrentHeightWater * _OutFlowMax) / _HeigtMaxWater;
+           foreach (IObserver<Turbine> observer in _Observers)
+           {
+               observer.OnNext(this);
+           }
+
+
+
         }
 
 
@@ -185,6 +202,8 @@ namespace DamProject.DamLibrary
 
         #region Attributes
 
+        private long _CurrentMegawatts;
+        private long _CurrentOutFlow;
         private long _OutFlowMin;
         private long _OutFlowMax;
         private long _MegaWattsMin;

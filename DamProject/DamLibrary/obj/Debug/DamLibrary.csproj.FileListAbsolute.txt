@@ -8,3 +8,8 @@ C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\obj\Debug\DamLibrar
 C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb
 C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
 C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb

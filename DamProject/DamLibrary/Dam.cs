@@ -57,8 +57,8 @@ namespace DamProject.DamLibrary
 
         public virtual void OnNext(Turbine pValue)
         {
-            long megawatts = pValue.getMegaWatts();
-            long outFlow = pValue.getOutFlow();
+            _TotalPower += pValue.CurrentMegawatts;
+            _OutFlow = pValue.CurrentOutFlow;
 
 
         }

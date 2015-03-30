@@ -36,3 +36,17 @@ C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis2.0\Proyecto1\Pruebas\DamProject
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.exe.config
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.exe
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.exe
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\bin\Debug\DamLibrary.dll
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\bin\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csprojResolveAssemblyReference.cache
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamView.baml
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\MainWindow.baml
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamView.g.cs
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\MainWindow.g.cs
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\App.g.cs
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI_MarkupCompile.cache
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.g.resources
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamProject.DamGUI.Properties.Resources.resources
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csproj.GenerateResource.Cache
