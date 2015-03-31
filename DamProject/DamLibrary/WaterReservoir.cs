@@ -124,7 +124,7 @@ namespace DamProject.DamLibrary
 
         }
 
-        public long getVolume()
+        private long getVolume()
         {
             long volume;
             volume = _Lenght * _Height * _Width;

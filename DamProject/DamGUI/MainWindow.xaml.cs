@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DamProject.DamLibrary;
+using System.Timers;
 
 namespace DamProject.DamGUI
 {
@@ -26,12 +27,6 @@ namespace DamProject.DamGUI
         public MainWindow()
         {
             InitializeComponent();
-            
-            var DamSimulation = Dam.Instance;
-            DamSimulation.createTurbine(turbineQuantity, outFlowMin, outFlowMax, megawattsMin, megaWattsMax,
-             heightwaterMin, heightWaterMax);
-            DamSimulation.createWaterReservoir(speddMet, height, lenght, width);
-
         }
 
         private void _BtnCreateDam_Click(object sender, RoutedEventArgs e)
@@ -69,18 +64,50 @@ namespace DamProject.DamGUI
                 megaWattsMax = Convert.ToInt64(megaWattsMaxText);
                 speddMet = Convert.ToInt64(speedMetText);
 
-
                 this.Hide();
+
                 TecDam tecdam = new TecDam();
-                tecdam.ShowDialog();
-               
-               
+              
+
+                var DamSimulation = Dam.Instance;
+
+                _Turb = DamSimulation.createTurbine(turbineQuantity, outFlowMin, outFlowMax,
+                megawattsMin, megaWattsMax, heightwaterMin, heightWaterMax);
+
+               _Reservoir = DamSimulation.createWaterReservoir(speddMet, height, lenght, width);
+
+                _Reservoir.Subscribe(_Turb);
+                _Turb.Subscribe(DamSimulation);
+                DamSimulation.Subscribe(tecdam);
+
+                _Reservoir.startWaterLevel();
+                
+
+                //tecdam.ShowDialog();
+
+                Timer myTimer = new Timer();
+                myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+                myTimer.Interval = 500; // 1000 ms is one second
+                myTimer.Start();
+
+
 
             }
 
-         
             
         }
+        
+        
+        public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
+            {
+
+                _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
+               
+
+               
+              
+            }
+   
 
         #region Atributtes
 
@@ -95,18 +122,15 @@ namespace DamProject.DamGUI
         private static long megawattsMin;
         private static long megaWattsMax;
         private static long speddMet;
+        private static Turbine _Turb;
+        private static WaterReservoir _Reservoir;
 
 
 
         #endregion
 
 
-      
-
-
-
-
-
 
     }
 }
+

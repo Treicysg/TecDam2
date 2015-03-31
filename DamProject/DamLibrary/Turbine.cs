@@ -24,16 +24,7 @@ namespace DamProject.DamLibrary
 
         #region Properties
 
-        public long OutFlowMin
-        {
-            get {
-                return _OutFlowMin;
-            }
-            set {
-                _OutFlowMin = value;
-            }
-        }
-
+       
         public long OutFlowMax
         {
             get

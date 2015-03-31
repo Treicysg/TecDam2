@@ -89,23 +89,27 @@ namespace DamProject.DamLibrary
 
         #region Methods
 
-        public void createTurbine(int pAmountTurbine, long pOutFlowMin,long pOutFlowMax,
+        public Turbine createTurbine(int pAmountTurbine, long pOutFlowMin, long pOutFlowMax,
         long pMegaWattsMin,long pMegaWattsMax,long pHeightMinWater,long pHeigtMaxWater) 
         {
+            //List<Turbine> turbines = new List<Turbine>();
 
-            for (int turbine = 1; turbine <= pAmountTurbine; turbine ++ )
-            {
+            //for (int turbine = 1; turbine <= pAmountTurbine; turbine ++ )
+            //{
                 Turbine turb = new Turbine(pAmountTurbine, pOutFlowMin, pOutFlowMax, pMegaWattsMin
                     , pMegaWattsMax, pHeightMinWater, pHeigtMaxWater);
-                
+                //turbines.Add(turb);
+               
+            //}
 
-            }
+            return turb;
+      
         }
 
-        public void createWaterReservoir(long pWaterFlowSpeed,long pHeight,long pLenght,long pWidth) {
+        public WaterReservoir createWaterReservoir(long pWaterFlowSpeed,long pHeight,long pLenght,long pWidth) {
 
             WaterReservoir Reservoir = new WaterReservoir(pWaterFlowSpeed, pHeight, pLenght, pWidth);
-           
+            return Reservoir;
         }
 
        
