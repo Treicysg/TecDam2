@@ -176,15 +176,6 @@ namespace DamProject.DamLibrary
         }
 
 
-        //This will convert Megawatts of every turbine and dam to KiloWatts 
-        private int convetMwToKw(int pMegaWatts) 
-        {
-            int kiloWatts;
-            kiloWatts = pMegaWatts * 1000;
-            return kiloWatts;
-        }
-
-
         private void changeTurbineState(Turbine pTurbineName) 
         {
             if (pTurbineName._Enable == true)

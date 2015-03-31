@@ -69,8 +69,11 @@ namespace DamProject.DamGUI
                 megaWattsMax = Convert.ToInt64(megaWattsMaxText);
                 speddMet = Convert.ToInt64(speedMetText);
 
+
+                this.Hide();
                 TecDam tecdam = new TecDam();
                 tecdam.ShowDialog();
+               
                
 
             }

@@ -43,6 +43,15 @@ namespace DamProject.DamLibrary
         #endregion 
 
         #region Properties
+
+        public long TotalPower
+        {
+            get
+            {
+                return _TotalPower;
+            }
+
+        }
         #endregion
 
         #region observer methods
