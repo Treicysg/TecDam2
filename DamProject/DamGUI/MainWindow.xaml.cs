@@ -56,44 +56,17 @@ namespace DamProject.DamGUI
             else
             {
 
-                height = Convert.ToInt64(heightText);
-                lenght = Convert.ToInt64(lenghtText);
-                width = Convert.ToInt64(widthText);
-                turbineQuantity = Convert.ToInt32(turbineQuantityText);
-                outFlowMin = Convert.ToInt64(outFlowMinText);
-                outFlowMax = Convert.ToInt64(outFlowMaxText);
-                heightwaterMin = Convert.ToInt64(heightwaterMinText);
-                heightWaterMax = Convert.ToInt64(heightWaterMaxText);
-                megawattsMin = Convert.ToInt64(megawattsMinText);
-                megaWattsMax = Convert.ToInt64(megaWattsMaxText);
-                speddMet = Convert.ToInt64(speedMetText);
-
-                this.Hide();
-                TecDam tecdam = new TecDam();
-                tecdam.ShowDialog();
-
-                var DamSimulation = Dam.Instance;
-
-                _Turb = DamSimulation.createTurbine(turbineQuantity, outFlowMin, outFlowMax,
-                megawattsMin, megaWattsMax, heightwaterMin, heightWaterMax);
-
-                _Reservoir = DamSimulation.createWaterReservoir(speddMet, height, lenght, width);
-
-                _Reservoir.Subscribe(_Turb);
-                _Turb.Subscribe(DamSimulation);
-                DamSimulation.Subscribe(tecdam);
-
-                _Reservoir.startWaterLevel();
-                _Reservoir.startSimulation();
-
-
-
-                Timer myTimer = new Timer();
-                myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
-                myTimer.Interval = 500; // 1000 ms is one second
-                myTimer.Start();
-
-
+                _HeightInput = Convert.ToInt64(heightText);
+                _LenghtInput = Convert.ToInt64(lenghtText);
+                _WidthInput = Convert.ToInt64(widthText);
+                _TurbineQuantityInput = Convert.ToInt32(turbineQuantityText);
+                _OutFlowMinInput = Convert.ToInt64(outFlowMinText);
+                _OutFlowMaxInput = Convert.ToInt64(outFlowMaxText);
+                _HeightwaterMinInput = Convert.ToInt64(heightwaterMinText);
+                _HeightWaterMaxInput = Convert.ToInt64(heightWaterMaxText);
+                _MegawattsMinInput = Convert.ToInt64(megawattsMinText);
+                _MegaWattsMaxInput = Convert.ToInt64(megaWattsMaxText);
+                _SpeedMetInput = Convert.ToInt64(speedMetText);
 
         }
 
@@ -109,14 +82,106 @@ namespace DamProject.DamGUI
 
         #region Properties
 
-        public long Height
+        public long HeightInput
         {
             get
             {
-                return height;
+                return _HeightInput;
             }
 
         }
+
+        public long LenghtInput
+        {
+            get
+            {
+                return _LenghtInput;
+            }
+
+        }
+
+        public long WidthInput
+        {
+            get
+            {
+                return _WidthInput;
+            }
+
+        }
+
+        public long TurbineQuantityInput
+        {
+            get
+            {
+                return _TurbineQuantityInput;
+            }
+
+        }
+
+        public long OutFlowMinInput
+        {
+            get
+            {
+                return _OutFlowMinInput;
+            }
+
+        }
+
+        public long OutFlowMaxInput
+        {
+            get
+            {
+                return _OutFlowMaxInput;
+            }
+
+        }
+
+        public long HeightwaterMinInput
+        {
+            get
+            {
+                return _HeightwaterMinInput;
+            }
+
+        }
+
+        public long HeightWaterMaxInput
+        {
+            get
+            {
+                return _HeightWaterMaxInput;
+            }
+
+        }
+
+        public long MegawattsMinInput
+        {
+            get
+            {
+                return _MegawattsMinInput;
+            }
+
+        }
+
+        public long MegaWattsMaxInput
+        {
+            get
+            {
+                return _MegaWattsMaxInput;
+            }
+
+        }
+
+        public long SpeedMetInput
+        {
+            get
+            {
+                return _SpeedMetInput;
+            }
+
+        }
+
+      
 
        
         
@@ -125,34 +190,23 @@ namespace DamProject.DamGUI
 
         #region Atributtes
 
-        private static long height;
-        private static long lenght;
-        private static long width;
-        private static int turbineQuantity;
-        private static long outFlowMin;
-        private static long outFlowMax;
-        private static long heightwaterMin;
-        private static long heightWaterMax;
-        private static long megawattsMin;
-        private static long megaWattsMax;
-        private static long speddMet;
-        private static Turbine _Turb;
-        private static WaterReservoir _Reservoir;
-
+        private long _HeightInput;
+        private long _LenghtInput;
+        private long _WidthInput;
+        private int _TurbineQuantityInput;
+        private long _OutFlowMinInput;
+        private long _OutFlowMaxInput;
+        private long _HeightwaterMinInput;
+        private long _HeightWaterMaxInput;
+        private long _MegawattsMinInput;
+        private long _MegaWattsMaxInput;
+        private long _SpeedMetInput;
+        
 
 
         #endregion
 
-        public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
-        {
-
-            _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
-
-
-
-
-
-        }
+       
 
     }
 }

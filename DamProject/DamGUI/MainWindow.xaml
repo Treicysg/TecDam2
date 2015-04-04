@@ -1,4 +1,4 @@
-﻿<Window x:Class="DamProject.DamGUI.MainWindow" x:FieldModifier="public"
+﻿<Window x:Class="DamProject.DamGUI.MainWindow" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Configuración de la Represa" Height="652" Width="650">
