@@ -16,6 +16,7 @@ namespace DamProject.DamLibrary
         private Dam()
         {
             _Observers = new List<IObserver<Dam>>();
+            
 
         }
 

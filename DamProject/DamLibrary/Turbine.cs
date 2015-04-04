@@ -132,6 +132,7 @@ namespace DamProject.DamLibrary
         {
             _CurrentHeightWater= pValue.CurrentHeight;
             //  hago los calculos para modificar mi OutFlow y mis Megavatios segun esa altura
+            updateValues();
 
         }
         #endregion

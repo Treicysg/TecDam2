@@ -23,6 +23,7 @@ namespace DamProject.DamGUI
         public TecDam()
         {
             InitializeComponent();
+         
           
         }
 
@@ -39,6 +40,8 @@ namespace DamProject.DamGUI
 
         public virtual void OnNext(Dam pValue)
         {
+
+            
             _TotalKilowatts = convetMwToKw(pValue.TotalPower);
             _WaterHeight = pValue.CurrentHeightWater;
             updateWindowValues();

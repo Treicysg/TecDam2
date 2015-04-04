@@ -67,12 +67,11 @@ namespace DamProject.DamGUI
                 _MegawattsMinInput = Convert.ToInt64(megawattsMinText);
                 _MegaWattsMaxInput = Convert.ToInt64(megaWattsMaxText);
                 _SpeedMetInput = Convert.ToInt64(speedMetText);
+                this.Close();
 
         }
 
 
-
-        
 
 
          }
@@ -109,7 +108,7 @@ namespace DamProject.DamGUI
 
         }
 
-        public long TurbineQuantityInput
+        public int TurbineQuantityInput
         {
             get
             {
