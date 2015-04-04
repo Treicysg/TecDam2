@@ -10,7 +10,6 @@ C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\bin\Debug\DamLibrar
 C:\Users\Tracy\Documents\GitHub\TecDam\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb
-C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
@@ -18,3 +17,4 @@ C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\D
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb
+C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache

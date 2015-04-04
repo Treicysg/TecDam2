@@ -37,16 +37,13 @@ namespace DamProject.DamLibrary
             }
         }
 
-        public long MegaWattsMin
+        public long CurrentHeightWater
         {
             get
             {
-                return _MegaWattsMin;
+                return _CurrentHeightWater;
             }
-            set
-            {
-                _MegaWattsMin = value;
-            }
+           
         }
 
         public long MegaWattsMax

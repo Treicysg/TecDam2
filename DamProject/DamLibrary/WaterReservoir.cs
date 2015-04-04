@@ -97,6 +97,21 @@ namespace DamProject.DamLibrary
 
         #region Methods
 
+        /// <summary>
+        /// The method will do the first 
+        /// </summary>
+        public void startSimulation()
+        {
+           
+
+            increaseWaterLevel(_WaterFlowSpeed);
+            _CurrentHeight = getWaterHeight();
+            foreach (IObserver<WaterReservoir> observer in _Observers)
+            {
+                observer.OnNext(this);
+            }
+        }
+
         public void updateWaterLevel(long pOutWaterFlowSpeed)
         {
             long waterIncome;

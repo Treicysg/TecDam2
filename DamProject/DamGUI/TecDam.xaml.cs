@@ -40,6 +40,7 @@ namespace DamProject.DamGUI
         public virtual void OnNext(Dam pValue)
         {
             _TotalKilowatts = convetMwToKw(pValue.TotalPower);
+            _WaterHeight = pValue.CurrentHeightWater;
             updateWindowValues();
            
            
@@ -61,7 +62,8 @@ namespace DamProject.DamGUI
         public void updateWindowValues()
         {
             _LblDamKiloWatts.Content = 1;//_TotalKilowatts;
-            this.Show();
+            _lblWaterMeter.Content = _WaterHeight;
+            this.ShowDialog();
            
         }
 

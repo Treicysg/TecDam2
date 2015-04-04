@@ -52,6 +52,15 @@ namespace DamProject.DamLibrary
             }
 
         }
+
+        public long CurrentHeightWater
+        {
+            get
+            {
+                return _CurrentHeightWater;
+            }
+
+        }
         #endregion
 
         #region observer methods
@@ -68,6 +77,7 @@ namespace DamProject.DamLibrary
         {
             _TotalPower += pValue.CurrentMegawatts;
             _OutFlow = pValue.CurrentOutFlow;
+            _CurrentHeightWater = pValue.CurrentHeightWater;
 
             foreach (IObserver<Dam> observer in _Observers)
             {
@@ -122,6 +132,7 @@ namespace DamProject.DamLibrary
         private static Object _LockObj = new Object();
         private List<IObserver<Dam>> _Observers = null;
         private List<Turbine> _Turbine = null;
+        private long  _CurrentHeightWater;
 
         #endregion
     }

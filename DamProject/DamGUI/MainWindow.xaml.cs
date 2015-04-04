@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using DamProject.DamLibrary;
 using System.Timers;
 
+
 namespace DamProject.DamGUI
 {
     /// <summary>
@@ -23,12 +24,15 @@ namespace DamProject.DamGUI
     public partial class MainWindow : Window
     {
 
-        
+       
         public MainWindow()
         {
             InitializeComponent();
+            
+           
         }
 
+        
         private void _BtnCreateDam_Click(object sender, RoutedEventArgs e)
         {
             String heightText = _TxtHeight.Text;
@@ -65,25 +69,24 @@ namespace DamProject.DamGUI
                 speddMet = Convert.ToInt64(speedMetText);
 
                 this.Hide();
-
                 TecDam tecdam = new TecDam();
-              
+                tecdam.ShowDialog();
 
                 var DamSimulation = Dam.Instance;
 
                 _Turb = DamSimulation.createTurbine(turbineQuantity, outFlowMin, outFlowMax,
                 megawattsMin, megaWattsMax, heightwaterMin, heightWaterMax);
 
-               _Reservoir = DamSimulation.createWaterReservoir(speddMet, height, lenght, width);
+                _Reservoir = DamSimulation.createWaterReservoir(speddMet, height, lenght, width);
 
                 _Reservoir.Subscribe(_Turb);
                 _Turb.Subscribe(DamSimulation);
                 DamSimulation.Subscribe(tecdam);
 
                 _Reservoir.startWaterLevel();
-                
+                _Reservoir.startSimulation();
 
-                //tecdam.ShowDialog();
+
 
                 Timer myTimer = new Timer();
                 myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
@@ -92,22 +95,33 @@ namespace DamProject.DamGUI
 
 
 
-            }
+        }
+
+
+
+        
+
+
+         }
 
             
-        }
         
-        
-        public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
+
+        #region Properties
+
+        public long Height
+        {
+            get
             {
-
-                _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
-               
-
-               
-              
+                return height;
             }
-   
+
+        }
+
+       
+        
+
+        #endregion
 
         #region Atributtes
 
@@ -129,7 +143,16 @@ namespace DamProject.DamGUI
 
         #endregion
 
+        public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
+        {
 
+            _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
+
+
+
+
+
+        }
 
     }
 }
