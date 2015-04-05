@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DamProject.DamLibrary
 {
@@ -121,6 +122,28 @@ namespace DamProject.DamLibrary
 
             WaterReservoir Reservoir = new WaterReservoir(pWaterFlowSpeed, pHeight, pLenght, pWidth);
             return Reservoir;
+        }
+
+        public void convertMt3ToCm3(long pQuantity)
+        {
+            try
+            {
+                long result = pQuantity * 1000000;
+                
+                
+            }
+
+            catch (OverflowException) {
+            // Que pasa si se excede 
+            }
+            
+
+        }
+
+        public void paintWaterlevel()
+        {
+
+           
         }
 
        
