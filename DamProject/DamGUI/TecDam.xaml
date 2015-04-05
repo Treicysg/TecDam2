@@ -28,7 +28,7 @@
         <Label Content="cm3" HorizontalAlignment="Left" Height="30" Margin="774,41,0,0" VerticalAlignment="Top" Width="33"/>
         <Label x:Name="_LblDamKiloWatts" Content="0" HorizontalAlignment="Left" Height="28" Margin="306,365,0,0" VerticalAlignment="Top" Width="111"/>
         <WrapPanel x:Name="_TurbineProperties" HorizontalAlignment="Left" Height="73" Margin="491,371,0,0" VerticalAlignment="Top" Width="278" Orientation="Vertical" IsHitTestVisible="True" AllowDrop="True">
-            <CheckBox x:Name="_chkTurbineEnable" Content="Habilitado" Height="21" Width="87"/>
+            <CheckBox x:Name="_chkTurbineEnable" Content="Habilitado" Height="21" Width="87" Checked="_chkTurbineEnable_Checked"/>
             <Label x:Name="_lblTurbineKilowatts" Content="kilovatios:" Height="26" Width="89"/>
             <Label x:Name="_lblTurbineKiloWatts" Content="0" Height="23" Width="66" AllowDrop="False"/>
         </WrapPanel>

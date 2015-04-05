@@ -55,19 +55,27 @@ namespace DamProject.DamGUI
             }
             else
             {
+                try
+                {
 
-                _HeightInput = Convert.ToInt64(heightText);
-                _LenghtInput = Convert.ToInt64(lenghtText);
-                _WidthInput = Convert.ToInt64(widthText);
-                _TurbineQuantityInput = Convert.ToInt32(turbineQuantityText);
-                _OutFlowMinInput = Convert.ToInt64(outFlowMinText);
-                _OutFlowMaxInput = Convert.ToInt64(outFlowMaxText);
-                _HeightwaterMinInput = Convert.ToInt64(heightwaterMinText);
-                _HeightWaterMaxInput = Convert.ToInt64(heightWaterMaxText);
-                _MegawattsMinInput = Convert.ToInt64(megawattsMinText);
-                _MegaWattsMaxInput = Convert.ToInt64(megaWattsMaxText);
-                _SpeedMetInput = Convert.ToInt64(speedMetText);
-                this.Close();
+                    _HeightInput = Convert.ToInt64(heightText);
+                    _LenghtInput = Convert.ToInt64(lenghtText);
+                    _WidthInput = Convert.ToInt64(widthText);
+                    _TurbineQuantityInput = Convert.ToInt32(turbineQuantityText);
+                    _OutFlowMinInput = Convert.ToInt64(outFlowMinText);
+                    _OutFlowMaxInput = Convert.ToInt64(outFlowMaxText);
+                    _HeightwaterMinInput = Convert.ToInt64(heightwaterMinText);
+                    _HeightWaterMaxInput = Convert.ToInt64(heightWaterMaxText);
+                    _MegawattsMinInput = Convert.ToInt64(megawattsMinText);
+                    _MegaWattsMaxInput = Convert.ToInt64(megaWattsMaxText);
+                    _SpeedMetInput = Convert.ToInt64(speedMetText);
+                }
+
+                catch (OverflowException)
+                {
+
+                    MessageBox.Show("Datos no válidos");
+                }
 
         }
 

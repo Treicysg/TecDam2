@@ -75,9 +75,9 @@ namespace DamProject.Application
 
         public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
         {
-
-            _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
             
+                _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
+           
 
 
 

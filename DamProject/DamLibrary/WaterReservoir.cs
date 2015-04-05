@@ -119,22 +119,32 @@ namespace DamProject.DamLibrary
             waterIncome = _WaterFlowSpeed - pOutWaterFlowSpeed;
             long lastHeight = getWaterHeight();
             increaseWaterLevel(waterIncome);
-            long change = getWaterHeight() - lastHeight;
-            
 
-            // velocidadEntra el agua - velocidad a la que sale
-            // lo anterior es por segundo
-            // calculo cuantos segundos han pasado
-            // ya se cuanta aguan entro, entonces calculo cuanto se modifica la altura
-
-
-       
-            if (Math.Abs(change) > 1)
+            if (!isFull())
             {
-                foreach (IObserver<WaterReservoir> observer in _Observers)
+                long change = getWaterHeight() - lastHeight;
+
+
+                // velocidadEntra el agua - velocidad a la que sale
+                // lo anterior es por segundo
+                // calculo cuantos segundos han pasado
+                // ya se cuanta aguan entro, entonces calculo cuanto se modifica la altura
+
+
+
+                if (Math.Abs(change) > 1)
                 {
-                    observer.OnNext(this);
+                    foreach (IObserver<WaterReservoir> observer in _Observers)
+                    {
+                        observer.OnNext(this);
+                    }
                 }
+            }
+
+            else { 
+                  //Deberia detener el programa
+                //return;
+            
             }
 
         }
@@ -149,14 +159,41 @@ namespace DamProject.DamLibrary
 
         public void increaseWaterLevel(long pWater) {
 
-            _WaterQuantity +=pWater;
+            try
+            {
+                _WaterQuantity += pWater;
+            }
+            catch (OverflowException)
+            {
+                //Que pasa Si excede tamaño de un long
+            }
         
         
         }
 
         public void decreaseWaterLevel(long pWater) {
 
-            _WaterQuantity -= pWater;
+            try
+            {
+                _WaterQuantity -= pWater;
+            }
+            catch (OverflowException)
+            {
+                //Que pasa si tamaño de long es superado
+            }
+        }
+
+        public Boolean isFull()
+        {
+            Boolean full = false;
+
+            if (_WaterQuantity == getVolume())
+            {
+                full = true;
+            }
+            return full;
+
+
         }
 
         /// <summary>

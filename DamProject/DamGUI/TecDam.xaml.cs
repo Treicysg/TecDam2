@@ -20,6 +20,9 @@ namespace DamProject.DamGUI
     /// </summary>
     public partial class TecDam : Window, IObserver<Dam>
     {
+
+        delegate void SetTextCallback(string text);
+
         public TecDam()
         {
             InitializeComponent();
@@ -64,9 +67,9 @@ namespace DamProject.DamGUI
 
         public void updateWindowValues()
         {
-            _LblDamKiloWatts.Content = 1;//_TotalKilowatts;
-            _lblWaterMeter.Content = _WaterHeight;
-            this.ShowDialog();
+            SetText("1"); //_TotalKilowatts;
+            //_lblWaterMeter.Content = _WaterHeight;
+            
            
         }
 
@@ -78,6 +81,23 @@ namespace DamProject.DamGUI
         #endregion
 
         #region Properties
+
+
+        private void SetText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the 
+            // calling thread to the thread ID of the creating thread. 
+            // If these threads are different, it returns true. 
+            if (this._LblDamKiloWatts.Dispatcher.CheckAccess())
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Dispatcher.BeginInvoke(d, new object[] { text });
+            }
+            else
+            {
+                this._LblDamKiloWatts.Content = text;
+            }
+        }
 
         public long WaterHeight
         {
@@ -178,5 +198,10 @@ namespace DamProject.DamGUI
         private long _TotalKilowatts;
 
         #endregion
+
+        private void _chkTurbineEnable_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

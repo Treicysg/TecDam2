@@ -205,6 +205,12 @@ namespace DamProject.DamGUI {
             return;
             case 11:
             this._chkTurbineEnable = ((System.Windows.Controls.CheckBox)(target));
+            
+            #line 31 "..\..\TecDam.xaml"
+            this._chkTurbineEnable.Checked += new System.Windows.RoutedEventHandler(this._chkTurbineEnable_Checked);
+            
+            #line default
+            #line hidden
             return;
             case 12:
             this._lblTurbineKilowatts = ((System.Windows.Controls.Label)(target));
