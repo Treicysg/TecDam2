@@ -23,9 +23,11 @@ namespace DamProject.DamGUI
 
         delegate void SetTextCallback(string text);
 
+      
         public TecDam()
         {
             InitializeComponent();
+           
          
           
         }
@@ -68,6 +70,7 @@ namespace DamProject.DamGUI
         public void updateWindowValues()
         {
             SetText("1"); //_TotalKilowatts;
+            this.ShowDialog();
             //_lblWaterMeter.Content = _WaterHeight;
             
            

@@ -11,7 +11,7 @@ namespace DamProject.Application
 {
     class Application
     {
-
+        [STAThread]
         public static void Main()
         {
             TecDam tecdam = new TecDam();
