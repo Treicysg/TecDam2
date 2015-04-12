@@ -8,6 +8,7 @@ namespace DamProject.DamLibrary
 {
     public class Turbine : IObserver<WaterReservoir>, IObservable<Turbine>
     {
+        #region constructor
         public Turbine(int pIdentifier, long pOutFlowMin, long pOutFlowMax,
         long pMegaWattsMin, long pMegaWattsMax, long pHeightMinWater, long pHeigtMaxWater)
         {
@@ -21,10 +22,12 @@ namespace DamProject.DamLibrary
             _MegaWattsMax = pMegaWattsMax;
 
         }
+        #endregion
+
 
         #region Properties
 
-       
+
         public long OutFlowMax
         {
             get
@@ -37,15 +40,7 @@ namespace DamProject.DamLibrary
             }
         }
 
-        public long CurrentHeightWater
-        {
-            get
-            {
-                return _CurrentHeightWater;
-            }
-           
-        }
-
+       
         public long MegaWattsMax
         {
             get
@@ -112,6 +107,44 @@ namespace DamProject.DamLibrary
 
         }
 
+        public long CurrentHeightWater
+        {
+            get
+            {
+                return _CurrentHeightWater;
+            }
+
+        }
+
+        public long CurrentWaterQuantity
+        {
+            get
+            {
+                return _CurrentWaterQuantity;
+            }
+
+        }
+
+        public long HeightWR
+        {
+            get
+            {
+                return _HeightWR;
+            }
+
+        }
+
+        public long SpeedFlow
+        {
+            get
+            {
+                return _SpeedFlow;
+            }
+
+        }
+
+
+
 
 
        
@@ -131,6 +164,9 @@ namespace DamProject.DamLibrary
         public virtual void OnNext(WaterReservoir pValue)
         {
             _CurrentHeightWater= pValue.CurrentHeight;
+            _CurrentWaterQuantity = pValue.WaterQuantity;
+            _HeightWR = pValue.Height;
+            _SpeedFlow = pValue.WaterFlowSpeed;
             //  hago los calculos para modificar mi OutFlow y mis Megavatios segun esa altura
             updateValues();
 
@@ -193,7 +229,15 @@ namespace DamProject.DamLibrary
         private List<IObserver<Turbine>> _Observers = null;
         private int _Identification;
         private Boolean _Enable;
+       
+        /// <summary>
+        /// Attributes that i need to pass to the other observer classes. 
+        /// </summary>
+        
         private long _CurrentHeightWater;
+        private long _CurrentWaterQuantity;
+        private long _HeightWR;
+        private long _SpeedFlow;
        
         #endregion
     }

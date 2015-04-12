@@ -35,10 +35,6 @@ namespace DamProject.DamLibrary
                 return _WaterQuantity;
             }
 
-            set
-            {
-                _WaterQuantity = value;
-            }
         }
 
         public long WaterFlowSpeed
@@ -61,10 +57,6 @@ namespace DamProject.DamLibrary
                 return _Height;
             }
 
-            set
-            {
-                _Height = value;
-            }
         }
 
         public long Lenght
@@ -98,7 +90,7 @@ namespace DamProject.DamLibrary
         #region Methods
 
         /// <summary>
-        /// The method will do the first 
+        /// The method will start the simulation, it'll assign the initials values.
         /// </summary>
         public void startSimulation()
         {

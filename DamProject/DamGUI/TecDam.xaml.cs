@@ -27,10 +27,7 @@ namespace DamProject.DamGUI
         public TecDam()
         {
             InitializeComponent();
-           
-         
-          
-        }
+       }
 
 
         #region observer methods
@@ -49,6 +46,10 @@ namespace DamProject.DamGUI
             
             _TotalKilowatts = convetMwToKw(pValue.TotalPower);
             _WaterHeight = pValue.CurrentHeightWater;
+            _WaterQuantity = convertMt3ToCm3(pValue.CurrentWaterQuantity);
+            _WaterReservoirHeight = pValue.Height;
+            _SpeedInWater = convertMt3ToCm3(pValue.Speed);
+            
             updateWindowValues();
            
            
@@ -56,6 +57,8 @@ namespace DamProject.DamGUI
             //Obtener valores que necesitan mostrarse en ventana
 
         }
+
+        #endregion
 
         #region methods
 
@@ -67,18 +70,41 @@ namespace DamProject.DamGUI
             return kiloWatts;
         }
 
+        public long convertMt3ToCm3(long pQuantity)
+        {
+            long result = 1;
+            try
+            {
+                result = pQuantity * 1000000;
+              
+
+
+            }
+
+            catch (OverflowException)
+            {
+                // Que pasa si se excede 
+            }
+
+            return result;  
+
+
+        }
+
         public void updateWindowValues()
         {
-            SetText("1"); //_TotalKilowatts;
+            _LblDamKiloWatts.Content=_TotalKilowatts;
+            _lblWaterMeter.Content = _WaterHeight;
+            _lblWaterLevel.Content = _WaterQuantity;
+            _lblHeightReservoir.Content = _WaterReservoirHeight;
+            _txtWaterFlowSpeed.Text = _SpeedInWater.ToString();
             this.ShowDialog();
-            //_lblWaterMeter.Content = _WaterHeight;
-            
-           
         }
+
 
        
 
-        #endregion
+    
 
 
         #endregion
@@ -202,6 +228,7 @@ namespace DamProject.DamGUI
 
         #endregion
 
+        
         private void _chkTurbineEnable_Checked(object sender, RoutedEventArgs e)
         {
 

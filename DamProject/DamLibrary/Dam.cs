@@ -63,6 +63,33 @@ namespace DamProject.DamLibrary
             }
 
         }
+
+        public long CurrentWaterQuantity
+        {
+            get
+            {
+                return _CurrentWaterQuantity;
+            }
+
+        }
+
+        public long Height
+        {
+            get
+            {
+                return _Height;
+            }
+
+        }
+
+        public long Speed{
+            get
+            {
+                return _Speed;
+            }
+
+        }
+
         #endregion
 
         #region observer methods
@@ -80,6 +107,10 @@ namespace DamProject.DamLibrary
             _TotalPower += pValue.CurrentMegawatts;
             _OutFlow = pValue.CurrentOutFlow;
             _CurrentHeightWater = pValue.CurrentHeightWater;
+            _CurrentWaterQuantity = pValue.CurrentWaterQuantity;
+            _Height = pValue.HeightWR;
+            _Speed = pValue.SpeedFlow;
+
 
             foreach (IObserver<Dam> observer in _Observers)
             {
@@ -124,28 +155,7 @@ namespace DamProject.DamLibrary
             return Reservoir;
         }
 
-        public void convertMt3ToCm3(long pQuantity)
-        {
-            try
-            {
-                long result = pQuantity * 1000000;
-                
-                
-            }
-
-            catch (OverflowException) {
-            // Que pasa si se excede 
-            }
-            
-
-        }
-
-        public void paintWaterlevel()
-        {
-
-           
-        }
-
+        
        
         #endregion
 
@@ -156,7 +166,14 @@ namespace DamProject.DamLibrary
         private static Object _LockObj = new Object();
         private List<IObserver<Dam>> _Observers = null;
         private List<Turbine> _Turbine = null;
+
+        /// <summary>
+        /// Attributes that it needs to pass to its observer classes
+        /// </summary>
         private long  _CurrentHeightWater;
+        private long _CurrentWaterQuantity;
+        private long _Height;
+        private long _Speed;
 
         #endregion
     }
