@@ -7,3 +7,21 @@ C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\Application\bin\Debug\DamGUI.
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\Application\bin\Debug\DamLibrary.pdb
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\Application\obj\Debug\Application.exe
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\Application\obj\Debug\Application.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\obj\Debug\Application.exe
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\obj\Debug\Application.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\bin\Debug\Application.exe
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\bin\Debug\Application.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\bin\Debug\DamGUI.exe
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\bin\Debug\DamLibrary.dll
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\bin\Debug\DamGUI.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\bin\Debug\DamLibrary.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\Application\obj\Debug\Application.csprojResolveAssemblyReference.cache
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\obj\Debug\Application.exe
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\obj\Debug\Application.csprojResolveAssemblyReference.cache
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\bin\Debug\Application.exe
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\bin\Debug\Application.pdb
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\bin\Debug\DamGUI.exe
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\bin\Debug\DamLibrary.dll
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\bin\Debug\DamGUI.pdb
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\bin\Debug\DamLibrary.pdb
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\Application\obj\Debug\Application.pdb

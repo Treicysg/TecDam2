@@ -67,3 +67,31 @@ C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\D
 C:\Users\Yasiell Vallejos G\Documents\TEC\Semestre I 2015\ProyectosGit\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csproj.GenerateResource.Cache
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\TecDam.baml
 C:\Users\Tracy\Documents\GitHub\TecDam2\DamProject\DamGUI\obj\Debug\TecDam.g.cs
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csprojResolveAssemblyReference.cache
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\MainWindow.baml
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\TecDam.baml
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\MainWindow.g.cs
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\TecDam.g.cs
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\App.g.cs
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI_MarkupCompile.cache
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.g.resources
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamProject.DamGUI.Properties.Resources.resources
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamProject.DamGUI.TecDAM.resources
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csproj.GenerateResource.Cache
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.exe
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csprojResolveAssemblyReference.cache
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\MainWindow.baml
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\MainWindow.g.cs
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\App.g.cs
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI_MarkupCompile.cache
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.g.resources
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamProject.DamGUI.Properties.Resources.resources
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamProject.DamGUI.TecDAM.resources
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.csproj.GenerateResource.Cache
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.exe
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.exe.config
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.exe
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\bin\Debug\DamGUI.pdb
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\bin\Debug\DamLibrary.dll
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\bin\Debug\DamLibrary.pdb
+C:\Users\Yasiell Vallejos G\Desktop\TecDam2\DamProject\DamGUI\obj\Debug\DamGUI.pdb

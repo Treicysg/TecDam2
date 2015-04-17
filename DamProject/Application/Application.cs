@@ -14,8 +14,7 @@ namespace DamProject.Application
         [STAThread]
         public static void Main()
         {
-            TecDam tecdam = new TecDam();
-
+            TecDAM tecdam = new TecDAM();
 
 
             var DamSimulation = Dam.Instance;
@@ -77,11 +76,7 @@ namespace DamProject.Application
         {
             
                 _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
-           
-
-
-
-
+          
 
         }
 
