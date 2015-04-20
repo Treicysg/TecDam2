@@ -17,6 +17,8 @@ namespace DamProject.DamGUI
         public TecDAM()
         {
             InitializeComponent();
+            draw(10, 190, 180, 350, 600, 215);
+            
 
         }
 
@@ -86,7 +88,7 @@ namespace DamProject.DamGUI
             this.ShowDialog();
         }
 
-        public void draw() 
+        public void draw(int a,int b, int c,int d,int e,int f) 
         {
             
             Bitmap drawPicture;
@@ -98,13 +100,27 @@ namespace DamProject.DamGUI
             Graphics g = Graphics.FromImage(drawPicture);
             Graphics h = Graphics.FromImage(drawPicture);
 
-            for (int i = 10; i < 190; i++)
+            for (int i = a; i < b; i++)
             {
-                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + 100; //define la altura del rect
+                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + 100; 
                 Brush aBrush = (Brush)Brushes.Cyan;
                 g.FillRectangle(aBrush, i, aux, 1, 1);
 
-                for (int j = aux + 2 + 1; j < 180; j++)
+                for (int j = aux + 2 + 1; j < c; j++)
+                {
+                    Brush bBrush = (Brush)Brushes.Blue;
+                    h.FillRectangle(bBrush, i, j, 1, 1);
+                }
+
+            }
+
+            for (int i = d; i < e; i++)
+            {
+                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + 100;
+                Brush aBrush = (Brush)Brushes.Cyan;
+                g.FillRectangle(aBrush, i, aux, 1, 1);
+
+                for (int j = aux + 2 + 1; j < f; j++)
                 {
                     Brush bBrush = (Brush)Brushes.Blue;
                     h.FillRectangle(bBrush, i, j, 1, 1);
@@ -221,7 +237,7 @@ namespace DamProject.DamGUI
 
         private void _BtnApply_Click(object sender, EventArgs e)
         {
-            draw();
+            
         }
 
        
