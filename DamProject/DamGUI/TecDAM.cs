@@ -17,7 +17,7 @@ namespace DamProject.DamGUI
         public TecDAM()
         {
             InitializeComponent();
-            draw(10, 190, 180, 350, 600, 215);
+            draw(53, 125);
             
 
         }
@@ -88,7 +88,7 @@ namespace DamProject.DamGUI
             this.ShowDialog();
         }
 
-        public void draw(int a,int b, int c,int d,int e,int f) 
+        public void draw(int a,int b) 
         {
             
             Bitmap drawPicture;
@@ -100,13 +100,13 @@ namespace DamProject.DamGUI
             Graphics g = Graphics.FromImage(drawPicture);
             Graphics h = Graphics.FromImage(drawPicture);
 
-            for (int i = a; i < b; i++)
+            for (int i = 10; i < 190; i++)
             {
-                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + 100; 
+                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + a; 
                 Brush aBrush = (Brush)Brushes.Cyan;
                 g.FillRectangle(aBrush, i, aux, 1, 1);
 
-                for (int j = aux + 2 + 1; j < c; j++)
+                for (int j = aux + 2 + 1; j < 180; j++)
                 {
                     Brush bBrush = (Brush)Brushes.Blue;
                     h.FillRectangle(bBrush, i, j, 1, 1);
@@ -114,13 +114,13 @@ namespace DamProject.DamGUI
 
             }
 
-            for (int i = d; i < e; i++)
+            for (int i = 354; i < 600; i++)
             {
-                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + 100;
+                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + b;
                 Brush aBrush = (Brush)Brushes.Cyan;
                 g.FillRectangle(aBrush, i, aux, 1, 1);
 
-                for (int j = aux + 2 + 1; j < f; j++)
+                for (int j = aux + 2 + 1; j < 215; j++)
                 {
                     Brush bBrush = (Brush)Brushes.Blue;
                     h.FillRectangle(bBrush, i, j, 1, 1);
