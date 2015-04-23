@@ -23,3 +23,8 @@ C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis\Proyecto1\Proy1\DamProject\DamL
 C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis\Proyecto1\Proy1\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis\Proyecto1\Proy1\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
 C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis\Proyecto1\Proy1\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.dll
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamLibrary\bin\Debug\DamLibrary.pdb
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.dll
+C:\Users\Yasiell Vallejos G\Source\Repos\TecDam2\DamProject\DamLibrary\obj\Debug\DamLibrary.pdb

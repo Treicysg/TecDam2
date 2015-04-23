@@ -48,7 +48,7 @@ namespace DamProject.Application
             MainWindow mw = new MainWindow();
 
 
-            TecDam tecdam = new TecDam();
+            TecDAM tecdam = new TecDAM();
           
 
 
