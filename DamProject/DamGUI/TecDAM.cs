@@ -18,7 +18,6 @@ namespace DamProject.DamGUI
         {
             InitializeComponent();
             draw(53, 125);
-            
 
         }
 
@@ -102,7 +101,7 @@ namespace DamProject.DamGUI
 
             for (int i = 10; i < 190; i++)
             {
-                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + a; 
+                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 18) * 3)) + a; 
                 Brush aBrush = (Brush)Brushes.Cyan;
                 g.FillRectangle(aBrush, i, aux, 1, 1);
 

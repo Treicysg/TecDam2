@@ -14,7 +14,7 @@ namespace DamProject.Application
         [STAThread]
         public static void Main()
         {
-            TecDAM tecdam = new TecDAM();
+            /*TecDAM tecdam = new TecDAM();
 
 
             var DamSimulation = Dam.Instance;
@@ -36,13 +36,13 @@ namespace DamProject.Application
             Timer myTimer = new Timer();
             myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
             myTimer.Interval = 500; // 1000 ms is one second
-            myTimer.Start();
+            myTimer.Start();*/
 
 
-            /*MainWindow mw = new MainWindow();
+            MainWindow mw = new MainWindow();
 
 
-            TecDam tecdam = new TecDam();
+            TecDAM tecdam = new TecDAM();
           
 
 
@@ -67,7 +67,7 @@ namespace DamProject.Application
             Timer myTimer = new Timer();
             myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
             myTimer.Interval = 500; // 1000 ms is one second
-            myTimer.Start();*/
+            myTimer.Start();
 
         }
 
