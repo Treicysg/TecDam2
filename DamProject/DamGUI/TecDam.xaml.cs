@@ -1,26 +1,34 @@
 ﻿using DamProject.DamLibrary;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace DamProject.DamGUI
 {
-    public partial class TecDAM : Form, IObserver<Dam>
+    /// <summary>
+    /// Interaction logic for TecDam.xaml
+    /// </summary>
+    public partial class TecDam : Window, IObserver<Dam>
     {
 
-        public TecDAM()
+        delegate void SetTextCallback(string text);
+
+      
+        public TecDam()
         {
             InitializeComponent();
-            draw(53, 125);
-
-        }
-
+          
+       }
 
 
         #region observer methods
@@ -35,19 +43,25 @@ namespace DamProject.DamGUI
 
         public virtual void OnNext(Dam pValue)
         {
+
+            
             _TotalKilowatts = convetMwToKw(pValue.TotalPower);
             _WaterHeight = pValue.CurrentHeightWater;
             _WaterQuantity = convertMt3ToCm3(pValue.CurrentWaterQuantity);
             _WaterReservoirHeight = pValue.Height;
             _SpeedInWater = convertMt3ToCm3(pValue.Speed);
-
+            
             updateWindowValues();
-
+           
+           
+           
             //Obtener valores que necesitan mostrarse en ventana
 
         }
 
         #endregion
+
+       
 
         #region methods
 
@@ -65,6 +79,9 @@ namespace DamProject.DamGUI
             try
             {
                 result = pQuantity * 1000000;
+              
+
+
             }
 
             catch (OverflowException)
@@ -72,64 +89,49 @@ namespace DamProject.DamGUI
                 // Que pasa si se excede 
             }
 
-            return result;
+            return result;  
 
 
         }
 
         public void updateWindowValues()
         {
-            _LblDamKiloWatts.Text = Convert.ToString(_TotalKilowatts);
-            _lblWaterMeter.Text = Convert.ToString(_WaterHeight);
-            _lblWaterLevel.Text = Convert.ToString(_WaterQuantity);
-            _lblHeightReservoir.Text = Convert.ToString(_WaterReservoirHeight);
+            _LblDamKiloWatts.Content=_TotalKilowatts;
+            _lblWaterMeter.Content = _WaterHeight;
+            _lblWaterLevel.Content = _WaterQuantity;
+            _lblHeightReservoir.Content = _WaterReservoirHeight;
             _txtWaterFlowSpeed.Text = _SpeedInWater.ToString();
+            _CmbTurbine.Items.Add("Turbine 1");
             this.ShowDialog();
-        }
-
-        public void draw(int a,int b) 
-        {
             
-            Bitmap drawPicture;
-
-            drawPicture = new Bitmap(_imgDamPicture.Width, _imgDamPicture.Height);
-
-            _imgDamPicture.Image = (Image)drawPicture;
-
-            Graphics g = Graphics.FromImage(drawPicture);
-            Graphics h = Graphics.FromImage(drawPicture);
-
-            for (int i = 10; i < 190; i++)
-            {
-                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 18) * 3)) + a; 
-                Brush aBrush = (Brush)Brushes.Cyan;
-                g.FillRectangle(aBrush, i, aux, 1, 1);
-
-                for (int j = aux + 2 + 1; j < 180; j++)
-                {
-                    Brush bBrush = (Brush)Brushes.Blue;
-                    h.FillRectangle(bBrush, i, j, 1, 1);
-                }
-
-            }
-
-            for (int i = 354; i < 600; i++)
-            {
-                int aux = Convert.ToInt32(Math.Round(Math.Sin(i / 4) * 3)) + b;
-                Brush aBrush = (Brush)Brushes.Cyan;
-                g.FillRectangle(aBrush, i, aux, 1, 1);
-
-                for (int j = aux + 2 + 1; j < 215; j++)
-                {
-                    Brush bBrush = (Brush)Brushes.Blue;
-                    h.FillRectangle(bBrush, i, j, 1, 1);
-                }
-
-            }
         }
+
+
+       
+
+    
+
+
         #endregion
 
         #region Properties
+
+
+        private void SetText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the 
+            // calling thread to the thread ID of the creating thread. 
+            // If these threads are different, it returns true. 
+            if (this._LblDamKiloWatts.Dispatcher.CheckAccess())
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Dispatcher.BeginInvoke(d, new object[] { text });
+            }
+            else
+            {
+                this._LblDamKiloWatts.Content = text;
+            }
+        }
 
         public long WaterHeight
         {
@@ -215,6 +217,8 @@ namespace DamProject.DamGUI
             }
         }
 
+
+
         #endregion
 
         #region attributes
@@ -226,19 +230,20 @@ namespace DamProject.DamGUI
         private long _Kilowatts;
         private long _RiverHeight;
         private long _TotalKilowatts;
+     
 
         #endregion
 
-        private void TecDAM_Load(object sender, EventArgs e)
+        
+        private void _chkTurbineEnable_Checked(object sender, RoutedEventArgs e)
         {
-
+            //Change the turbine state
         }
 
-        private void _BtnApply_Click(object sender, EventArgs e)
+        private void _BtnApply_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
+            //Change the speed 
 
-       
+        }
     }
 }

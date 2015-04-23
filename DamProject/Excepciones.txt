@@ -1,0 +1,2 @@
+Excepción Lanzada:System.DivideByZeroException: Intento de dividir por cero.
+   en DamProject.DamLibrary.WaterReservoir.getWaterHeight() en c:\Users\Tracy\Documents\TEC\Semestre 5\Analisis\Proyecto1\Proy1\DamProject\DamLibrary\WaterReservoir.cs:línea 211

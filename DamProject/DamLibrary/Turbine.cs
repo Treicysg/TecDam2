@@ -189,14 +189,21 @@ namespace DamProject.DamLibrary
 
         public void updateValues()
         {
-           _CurrentMegawatts = (_CurrentHeightWater * _MegaWattsMax) / _HeigtMaxWater;
-           _CurrentOutFlow= (_CurrentHeightWater * _OutFlowMax) / _HeigtMaxWater;
-           foreach (IObserver<Turbine> observer in _Observers)
-           {
-               observer.OnNext(this);
-           }
+           
+            try
+            {
+                _CurrentMegawatts = (_CurrentHeightWater * _MegaWattsMax) / _HeigtMaxWater;
+                _CurrentOutFlow = (_CurrentHeightWater * _OutFlowMax) / _HeigtMaxWater;
+                foreach (IObserver<Turbine> observer in _Observers)
+                {
+                    observer.OnNext(this);
+                }
 
+            }
+            catch (DivideByZeroException)
+            {
 
+            }
 
         }
 

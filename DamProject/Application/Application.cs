@@ -9,12 +9,16 @@ using System.Timers;
 
 namespace DamProject.Application
 {
-    class Application
+    class Application 
     {
+
+
+
         [STAThread]
         public static void Main()
         {
-            /*TecDAM tecdam = new TecDAM();
+            /**TecDam tecdam = new TecDam();
+
 
 
             var DamSimulation = Dam.Instance;
@@ -30,6 +34,8 @@ namespace DamProject.Application
             _Turb.Subscribe(DamSimulation);
             DamSimulation.Subscribe(tecdam);
 
+         
+
             _Reservoir.startWaterLevel();
             _Reservoir.startSimulation();
 
@@ -42,7 +48,7 @@ namespace DamProject.Application
             MainWindow mw = new MainWindow();
 
 
-            TecDAM tecdam = new TecDAM();
+            TecDam tecdam = new TecDam();
           
 
 
@@ -66,7 +72,7 @@ namespace DamProject.Application
 
             Timer myTimer = new Timer();
             myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
-            myTimer.Interval = 500; // 1000 ms is one second
+            myTimer.Interval = 1000; // 1000 ms is one second
             myTimer.Start();
 
         }
@@ -76,7 +82,11 @@ namespace DamProject.Application
         {
             
                 _Reservoir.updateWaterLevel(_Turb.CurrentOutFlow);
-          
+           
+
+
+
+
 
         }
 

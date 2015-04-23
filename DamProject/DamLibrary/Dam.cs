@@ -90,6 +90,15 @@ namespace DamProject.DamLibrary
 
         }
 
+        public long idTurbine
+        {
+            get
+            {
+                return _idTurbine;
+            }
+
+        }
+
         #endregion
 
         #region observer methods
@@ -110,6 +119,7 @@ namespace DamProject.DamLibrary
             _CurrentWaterQuantity = pValue.CurrentWaterQuantity;
             _Height = pValue.HeightWR;
             _Speed = pValue.SpeedFlow;
+            _idTurbine = pValue.Identification;
 
 
             foreach (IObserver<Dam> observer in _Observers)
@@ -139,7 +149,8 @@ namespace DamProject.DamLibrary
 
             //for (int turbine = 1; turbine <= pAmountTurbine; turbine ++ )
             //{
-                Turbine turb = new Turbine(pAmountTurbine, pOutFlowMin, pOutFlowMax, pMegaWattsMin
+                //instead of 1 = i
+                Turbine turb = new Turbine(1, pOutFlowMin, pOutFlowMax, pMegaWattsMin
                     , pMegaWattsMax, pHeightMinWater, pHeigtMaxWater);
                 //turbines.Add(turb);
                
@@ -174,6 +185,7 @@ namespace DamProject.DamLibrary
         private long _CurrentWaterQuantity;
         private long _Height;
         private long _Speed;
+        private int _idTurbine;
 
         #endregion
     }

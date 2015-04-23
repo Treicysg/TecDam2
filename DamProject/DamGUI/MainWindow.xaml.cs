@@ -28,6 +28,7 @@ namespace DamProject.DamGUI
         public MainWindow()
         {
             InitializeComponent();
+            this.ShowDialog();
             
            
         }
@@ -53,6 +54,12 @@ namespace DamProject.DamGUI
             {
                 MessageBox.Show("Debe ingresar todos los datos");
             }
+
+            else if (Convert.ToInt64(heightWaterMaxText) > Convert.ToInt64(heightText))
+            {
+                MessageBox.Show("Datos no consistentes");
+            }
+
             else
             {
                 try
@@ -69,6 +76,8 @@ namespace DamProject.DamGUI
                     _MegawattsMinInput = Convert.ToInt64(megawattsMinText);
                     _MegaWattsMaxInput = Convert.ToInt64(megaWattsMaxText);
                     _SpeedMetInput = Convert.ToInt64(speedMetText);
+                    this.Hide();
+                   
                 }
 
                 catch (OverflowException)

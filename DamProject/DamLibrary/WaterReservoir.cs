@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DamProject.DamLibrary
 {
     public class WaterReservoir : IObservable<WaterReservoir>
@@ -66,10 +67,7 @@ namespace DamProject.DamLibrary
                 return _Lenght;
             }
 
-            set
-            {
-                _Lenght = value;
-            }
+           
         }
 
         public long Width
@@ -79,10 +77,7 @@ namespace DamProject.DamLibrary
                 return _Width;
             }
 
-            set
-            {
-                _Width = value;
-            }
+            
         }
 
         #endregion
@@ -90,13 +85,16 @@ namespace DamProject.DamLibrary
         #region Methods
 
         /// <summary>
-        /// The method will start the simulation, it'll assign the initials values.
+        /// The method will start the simulation, it'll assign the initials values that Dam require 
+        /// to start.
         /// </summary>
         public void startSimulation()
         {
            
 
             increaseWaterLevel(_WaterFlowSpeed);
+            _LastTime = DateTime.Now;
+
             _CurrentHeight = getWaterHeight();
             foreach (IObserver<WaterReservoir> observer in _Observers)
             {
@@ -111,6 +109,7 @@ namespace DamProject.DamLibrary
             waterIncome = _WaterFlowSpeed - pOutWaterFlowSpeed;
             long lastHeight = getWaterHeight();
             increaseWaterLevel(waterIncome);
+            
 
             if (!isFull())
             {
@@ -134,8 +133,8 @@ namespace DamProject.DamLibrary
             }
 
             else { 
-                  //Deberia detener el programa
-                //return;
+                  //If the water reservoir is full i have to stop it.
+                return;
             
             }
 
@@ -158,6 +157,7 @@ namespace DamProject.DamLibrary
             catch (OverflowException)
             {
                 //Que pasa Si excede tamaño de un long
+               
             }
         
         
@@ -169,9 +169,10 @@ namespace DamProject.DamLibrary
             {
                 _WaterQuantity -= pWater;
             }
-            catch (OverflowException)
+            catch (OverflowException e)
             {
                 //Que pasa si tamaño de long es superado
+                saveException(e.ToString());
             }
         }
 
@@ -189,7 +190,7 @@ namespace DamProject.DamLibrary
         }
 
         /// <summary>
-        /// The water reservoir starts half full. 
+        /// The water reservoir starts half full. This method initialize it.
         /// </summary>
         public void startWaterLevel() {
 
@@ -198,12 +199,42 @@ namespace DamProject.DamLibrary
 
         }
 
+       
+      
+
         public long getWaterHeight() {
 
-            _CurrentHeight = _WaterQuantity /(_Width*_Lenght);
+            _CurrentHeight = 0;
+
+            try
+            {
+                _CurrentHeight = _WaterQuantity / (_Width * _Lenght);
+                return _CurrentHeight;
+            }
+            catch(DivideByZeroException e ) {
+                saveException(e.ToString());
+            
+            }
             return _CurrentHeight;
           
         
+        }
+
+        
+        public int getElapsedTime()
+        {
+            int seconds = 1;
+
+            DateTime current = DateTime.Now;
+            int cantidad = (current - _LastTime).Minutes;
+            seconds = cantidad * 60;
+            return seconds;
+        }
+
+        public void saveException(String pException){
+
+             string text = "Excepción Lanzada:" + pException + "\n";
+             System.IO.File.WriteAllText(@" C:\Users\Tracy\Documents\TEC\Semestre 5\Analisis\Proyecto1\Proy1\DamProject\Excepciones.txt", text);
         }
 
         #endregion
@@ -226,7 +257,8 @@ namespace DamProject.DamLibrary
         private long _Width;
         private long _WaterQuantity;
         private long _Volume;
-        private int _LastTime;
+       
+        private DateTime _LastTime;
 
         #endregion
     }
